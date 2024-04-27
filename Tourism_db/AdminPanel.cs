@@ -11,7 +11,7 @@ namespace Tourism_db
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=LAB108PC13\SQLEXPRESS;Initial Catalog=Countries1;Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Countries2;Integrated Security=True;TrustServerCertificate=True");
             con.Open();
 
             SqlCommand cmd = new SqlCommand("INSERT INTO Towns(TownsID, Town_Name) Values (@ID,@city)", con);
@@ -23,7 +23,7 @@ namespace Tourism_db
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=LAB108PC13\SQLEXPRESS;Initial Catalog=Countries1;Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Countries2;Integrated Security=True;TrustServerCertificate=True");
             con.Open();
 
             SqlCommand cmd = new SqlCommand("UPDATE Towns SET Town_Name=@city WHERE TownsID=@ID", con);
@@ -35,7 +35,7 @@ namespace Tourism_db
         }
         private void button3_Click_1(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=LAB108PC13\SQLEXPRESS;Initial Catalog=Countries1;Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Countries2;Integrated Security=True;TrustServerCertificate=True");
             con.Open();
             SqlCommand cmd = new SqlCommand("DELETE from Towns WHERE TownsID=@ID", con);
             cmd.Parameters.AddWithValue("@ID", int.Parse(textBox1.Text));
@@ -45,7 +45,7 @@ namespace Tourism_db
         }
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=LAB108PC13\SQLEXPRESS;Initial Catalog=Countries1;Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Countries2;Integrated Security=True;TrustServerCertificate=True");
             con.Open();
 
             SqlCommand cmd = new SqlCommand("SELECT TownsID, Town_Name from Towns", con);
@@ -60,7 +60,7 @@ namespace Tourism_db
 
         private void button4_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=LAB108PC13\SQLEXPRESS;Initial Catalog=Countries1;Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Countries2;Integrated Security=True;TrustServerCertificate=True");
             con.Open();
 
             SqlCommand cmd = new SqlCommand("INSERT INTO Countries(CountriesID, CountryName) VALUES (@ID,@Country)", con);

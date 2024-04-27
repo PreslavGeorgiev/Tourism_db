@@ -16,15 +16,15 @@ namespace Tourism_db
         public MainMenu(bool showAdminButton)
         {
             InitializeComponent();
-            if (showAdminButton == false)
+            if (!showAdminButton)
             {
-                button1.Visible = false;
+                adminButton.Visible = false;
             }
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=LAB108PC13\SQLEXPRESS;Initial Catalog=Countries1;Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Countries2;Integrated Security=True;");
             con.Open();
 
             SqlCommand cmd = new SqlCommand("SELECT CountriesID, CountryName FROM Countries", con);
@@ -52,7 +52,6 @@ namespace Tourism_db
         private void button1_Click(object sender, EventArgs e)
         {
             AdminPanel form1 = new AdminPanel();
-            this.Hide();
             form1.Show();
         }
 

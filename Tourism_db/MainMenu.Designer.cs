@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             comboBox1 = new ComboBox();
-            button1 = new Button();
+            adminButton = new Button();
             comboBox2 = new ComboBox();
             SuspendLayout();
             // 
@@ -37,42 +37,47 @@
             // 
             comboBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(152, 89);
+            comboBox1.Location = new Point(106, 53);
+            comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 46);
+            comboBox1.Size = new Size(129, 33);
             comboBox1.TabIndex = 0;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // button1
+            // adminButton
             // 
-            button1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(293, 262);
-            button1.Name = "button1";
-            button1.Size = new Size(215, 54);
-            button1.TabIndex = 1;
-            button1.Text = "Admin";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            adminButton.BackColor = SystemColors.ActiveCaption;
+            adminButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            adminButton.Location = new Point(205, 157);
+            adminButton.Margin = new Padding(2);
+            adminButton.Name = "adminButton";
+            adminButton.Size = new Size(150, 43);
+            adminButton.TabIndex = 1;
+            adminButton.Text = "Admin";
+            adminButton.UseVisualStyleBackColor = false;
+            adminButton.Click += button1_Click;
             // 
             // comboBox2
             // 
             comboBox2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(460, 89);
+            comboBox2.Location = new Point(322, 53);
+            comboBox2.Margin = new Padding(2);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(182, 46);
+            comboBox2.Size = new Size(129, 33);
             comboBox2.TabIndex = 2;
             // 
-            // Form3
+            // MainMenu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(comboBox2);
-            Controls.Add(button1);
+            Controls.Add(adminButton);
             Controls.Add(comboBox1);
-            Name = "Form3";
-            Text = "Form3";
+            Margin = new Padding(2);
+            Name = "MainMenu";
+            Text = "Main Page";
             Load += Form3_Load;
             ResumeLayout(false);
         }
@@ -80,7 +85,7 @@
         #endregion
 
         private ComboBox comboBox1;
-        private Button button1;
+        private Button adminButton;
         private ComboBox comboBox2;
     }
 }
