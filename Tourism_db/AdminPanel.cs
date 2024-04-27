@@ -60,6 +60,11 @@ namespace Tourism_db
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void addCountryButton_Click(object sender, EventArgs e)
+        {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Countries2;Integrated Security=True;TrustServerCertificate=True");
             con.Open();
 
@@ -69,6 +74,29 @@ namespace Tourism_db
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Record was inserted.");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Countries2;Integrated Security=True;TrustServerCertificate=True");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("UPDATE Countries SET CountryName=@country WHERE CountriesID=@ID", con);
+            cmd.Parameters.AddWithValue("@ID", int.Parse(textBox3.Text));
+            cmd.Parameters.AddWithValue("@country", textBox4.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Record was updated.");
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Countries2;Integrated Security=True;TrustServerCertificate=True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("DELETE from Countries WHERE CountriesID=@ID", con);
+            cmd.Parameters.AddWithValue("@ID", int.Parse(textBox3.Text));
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Record was deleted.");
         }
     }
 }

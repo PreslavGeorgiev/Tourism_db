@@ -39,7 +39,7 @@
             textBox4 = new TextBox();
             label3 = new Label();
             label4 = new Label();
-            button4 = new Button();
+            addCountryButton = new Button();
             button5 = new Button();
             button6 = new Button();
             SuspendLayout();
@@ -48,9 +48,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(210, 129);
+            label1.Location = new Point(147, 77);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(50, 38);
+            label1.Size = new Size(34, 25);
             label1.TabIndex = 0;
             label1.Text = "ID:";
             // 
@@ -58,84 +59,96 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(173, 195);
+            label2.Location = new Point(121, 117);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(87, 38);
+            label2.Size = new Size(60, 25);
             label2.TabIndex = 1;
             label2.Text = "Town:";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(266, 126);
+            textBox1.Location = new Point(186, 76);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(216, 45);
+            textBox1.Size = new Size(152, 32);
             textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(266, 192);
+            textBox2.Location = new Point(186, 115);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(216, 45);
+            textBox2.Size = new Size(152, 32);
             textBox2.TabIndex = 3;
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.ActiveCaption;
             button1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(254, 285);
+            button1.Location = new Point(178, 171);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(243, 55);
+            button1.Size = new Size(170, 42);
             button1.TabIndex = 4;
             button1.Text = "Add Town";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
             // button2
             // 
+            button2.BackColor = SystemColors.ActiveCaption;
             button2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(254, 408);
+            button2.Location = new Point(178, 245);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(243, 58);
+            button2.Size = new Size(170, 44);
             button2.TabIndex = 5;
             button2.Text = "Update Town";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click_1;
             // 
             // button3
             // 
+            button3.BackColor = SystemColors.ActiveCaption;
             button3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(254, 538);
+            button3.Location = new Point(178, 323);
+            button3.Margin = new Padding(2);
             button3.Name = "button3";
-            button3.Size = new Size(243, 60);
+            button3.Size = new Size(170, 43);
             button3.TabIndex = 6;
             button3.Text = "Delete Town";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click_1;
             // 
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(737, 126);
+            textBox3.Location = new Point(516, 76);
+            textBox3.Margin = new Padding(2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(216, 45);
+            textBox3.Size = new Size(152, 32);
             textBox3.TabIndex = 7;
             // 
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(737, 195);
+            textBox4.Location = new Point(516, 117);
+            textBox4.Margin = new Padding(2);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(216, 45);
+            textBox4.Size = new Size(152, 32);
             textBox4.TabIndex = 8;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(681, 129);
+            label3.Location = new Point(477, 77);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(50, 38);
+            label3.Size = new Size(34, 25);
             label3.TabIndex = 9;
             label3.Text = "ID:";
             // 
@@ -143,51 +156,61 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(610, 195);
+            label4.Location = new Point(427, 117);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(121, 38);
+            label4.Size = new Size(83, 25);
             label4.TabIndex = 10;
             label4.Text = "Country:";
             // 
-            // button4
+            // addCountryButton
             // 
-            button4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(724, 285);
-            button4.Name = "button4";
-            button4.Size = new Size(253, 55);
-            button4.TabIndex = 11;
-            button4.Text = "Add Country";
-            button4.UseVisualStyleBackColor = true;
+            addCountryButton.BackColor = Color.RosyBrown;
+            addCountryButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            addCountryButton.Location = new Point(507, 171);
+            addCountryButton.Margin = new Padding(2);
+            addCountryButton.Name = "addCountryButton";
+            addCountryButton.Size = new Size(177, 42);
+            addCountryButton.TabIndex = 11;
+            addCountryButton.Text = "Add Country";
+            addCountryButton.UseVisualStyleBackColor = false;
+            addCountryButton.Click += addCountryButton_Click;
             // 
             // button5
             // 
+            button5.BackColor = Color.RosyBrown;
             button5.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.Location = new Point(724, 408);
+            button5.Location = new Point(507, 245);
+            button5.Margin = new Padding(2);
             button5.Name = "button5";
-            button5.Size = new Size(253, 58);
+            button5.Size = new Size(177, 44);
             button5.TabIndex = 12;
             button5.Text = "Update Country";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
+            button6.BackColor = Color.RosyBrown;
             button6.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            button6.Location = new Point(724, 538);
+            button6.Location = new Point(507, 323);
+            button6.Margin = new Padding(2);
             button6.Name = "button6";
-            button6.Size = new Size(243, 60);
+            button6.Size = new Size(177, 43);
             button6.TabIndex = 13;
             button6.Text = "Delete Country";
-            button6.UseVisualStyleBackColor = true;
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
-            // Form1
+            // AdminPanel
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1229, 799);
+            ClientSize = new Size(860, 479);
             Controls.Add(button6);
             Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(addCountryButton);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(textBox4);
@@ -199,8 +222,9 @@
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
+            Margin = new Padding(2);
+            Name = "AdminPanel";
+            Text = "Admin Form";
             Load += Form1_Load_1;
             ResumeLayout(false);
             PerformLayout();
@@ -219,7 +243,7 @@
         private TextBox textBox4;
         private Label label3;
         private Label label4;
-        private Button button4;
+        private Button addCountryButton;
         private Button button5;
         private Button button6;
     }
